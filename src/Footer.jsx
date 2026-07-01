@@ -2,6 +2,7 @@ import './Home';
 import './About';
 import './Services';
 import './Contact';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -30,10 +31,10 @@ const Footer = () => {
             <div className="container mx-auto text-center mb-4">
                 <h2 className="text-lg font-semibold">Quick Links</h2>
                 <ul className="flex flex-col items-center space-y-2 mt-2">
-                    <li><a href="/Home" className="text-sm hover:text-blue-400">Home</a></li>
-                    <li><a href="/About" className="text-sm hover:text-blue-400">About Us</a></li>
-                    <li><a href="/Services" className="text-sm hover:text-blue-400">Services</a></li>
-                    <li><a href="/Contact" className="text-sm hover:text-blue-400">Contact</a></li>
+                    <li><Link to="/Home" className="text-sm hover:text-blue-400">Home</Link></li>
+                    <li><Link to="/About" className="text-sm hover:text-blue-400">About Us</Link></li>
+                    <li><Link to="/Services" className="text-sm hover:text-blue-400">Services</Link></li>
+                    <li><Link to="/Contact" className="text-sm hover:text-blue-400">Contact</Link></li>
                 </ul>
             </div>
             <div className="container mx-auto text-center mb-4">
