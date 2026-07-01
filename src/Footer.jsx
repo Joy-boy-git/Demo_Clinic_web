@@ -1,3 +1,8 @@
+import './Home';
+import './About';
+import './Services';
+import './Contact';
+
 const Footer = () => {
     return (
         <footer className="bg-gray-800 text-white py-6">
@@ -25,10 +30,10 @@ const Footer = () => {
             <div className="container mx-auto text-center mb-4">
                 <h2 className="text-lg font-semibold">Quick Links</h2>
                 <ul className="flex flex-col items-center space-y-2 mt-2">
-                    <li><a href="/" className="text-sm hover:text-blue-400">Home</a></li>
-                    <li><a href="/about" className="text-sm hover:text-blue-400">About Us</a></li>
-                    <li><a href="/services" className="text-sm hover:text-blue-400">Services</a></li>
-                    <li><a href="/contact" className="text-sm hover:text-blue-400">Contact</a></li>
+                    <li><a href="/Home" className="text-sm hover:text-blue-400">Home</a></li>
+                    <li><a href="/About" className="text-sm hover:text-blue-400">About Us</a></li>
+                    <li><a href="/Services" className="text-sm hover:text-blue-400">Services</a></li>
+                    <li><a href="/Contact" className="text-sm hover:text-blue-400">Contact</a></li>
                 </ul>
             </div>
             <div className="container mx-auto text-center mb-4">
