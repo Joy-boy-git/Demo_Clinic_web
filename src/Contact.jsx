@@ -7,19 +7,31 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import Footer from "./Footer";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, // Animation duration
+      disable: "false", // Disable AOS on mobile devices
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div>
     <section className="bg-gray-50 py-16 px-6 lg:px-20">
 
       {/* Heading */}
-      <div className="text-center">
+      <div className="text-center" data-aos="fade-up">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
           Contact Us
         </h1>
 
-        <p className="text-gray-500 mt-4 text-lg">
+        <p className="text-gray-500 mt-4 text-lg" data-aos="fade-up">
           We're here to help you. Feel free to contact us anytime.
         </p>
       </div>
@@ -28,7 +40,7 @@ const Contact = () => {
       <div className="grid lg:grid-cols-2 gap-12 mt-16">
 
         {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up-right">
 
           <h2 className="text-2xl font-bold mb-6">
             Send a Message
@@ -38,30 +50,35 @@ const Contact = () => {
 
             <input
               type="text"
-              placeholder="Full Name"
+              placeholder="Full Name" 
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              data-aos="fade-up"
             />
 
             <input
               type="email"
               placeholder="Email Address"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              data-aos="fade-up"
             />
 
             <input
               type="tel"
               placeholder="Phone Number"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              data-aos="fade-up"
             />
 
             <textarea
               rows="5"
               placeholder="Your Message"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              data-aos="fade-up"
             ></textarea>
 
             <button
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              data-aos="fade-up"
             >
               Send Message
             </button>
@@ -71,14 +88,14 @@ const Contact = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up-left">
 
           <h2 className="text-2xl font-bold mb-8">
             Clinic Information
           </h2>
 
           {/* Address */}
-          <div className="flex items-start gap-4 mb-6">
+          <div className="flex items-start gap-4 mb-6" data-aos="fade-up">
             <FaMapMarkerAlt className="text-blue-600 text-2xl mt-1" />
 
             <div>
@@ -96,7 +113,7 @@ const Contact = () => {
           </div>
 
           {/* Phone */}
-          <div className="flex items-start gap-4 mb-6">
+          <div className="flex items-start gap-4 mb-6" data-aos="fade-up">
             <FaPhoneAlt className="text-blue-600 text-2xl mt-1" />
 
             <div>
@@ -126,7 +143,7 @@ const Contact = () => {
           </div>
 
           {/* Working Hours */}
-          <div className="flex items-start gap-4 mb-8">
+          <div className="flex items-start gap-4 mb-8" data-aos="fade-up">
             <FaClock className="text-blue-600 text-2xl mt-1" />
 
             <div>

@@ -15,9 +15,9 @@ const App =() => {
     const [menuOpen, setMenuOpen] = useState(false)
     return(
          <div>
-            <div className="hidden md:flex justify-between items-center border-1 p-4 shadow-lg bg-white relativefixed t-0">
+            <div className="hidden md:flex justify-between items-center border-1 p-4 shadow-lg bg-white t-0">
                 <div>
-                     <h1 className="flex font-sanserif font-bold gap-2 text-3xl md:text-5xl text-black" data-aos="fade-right">STAR<span className="text-3xl text-black"> Clinic</span></h1>
+                     <h1 className="flex font-sanserif font-bold gap-2 text-3xl md:text-5xl text-black">STAR<span className="text-3xl text-black"> Clinic</span></h1>
         {/* Hamburger icon for mobile */}
                 </div>
                 <ul className="flex gap-6">
@@ -27,7 +27,7 @@ const App =() => {
                     <a href="">
                         <li className="text-black">📱+91 6543217890</li>
                     </a>
-                    <a href="">
+                    <a href="/Contact">
                         <li className="text-black">
                              <div className="flex items-center gap-3">
       <FaEnvelope className="text-blue-600 text-xl" />
@@ -36,7 +36,7 @@ const App =() => {
                             </li>
                     </a>
                 </ul>
-                <a href="">
+                <a href="/Contact">
                     <button className="bg-green-400 p-4 rounded-lg border">Book appoinment</button>
                 </a>
             </div>
