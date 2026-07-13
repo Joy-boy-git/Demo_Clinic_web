@@ -6,7 +6,7 @@ import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import {link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Home = () => {
 
