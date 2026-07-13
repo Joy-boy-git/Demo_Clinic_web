@@ -6,6 +6,7 @@ import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import {link} from "react-router-dom";
 
 const Home = () => {
 
@@ -37,9 +38,9 @@ const Home = () => {
               Your trusted healthcare partner. Book appointments easily and
               receive quality medical care from experienced doctors.
             </p>
-            <a href="/Contact" className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg transition">
+            <Link to="/Contact" className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg transition">
               Book Appointment
-            </a>
+            </Link>
           </div>
         </div>
       </div>
