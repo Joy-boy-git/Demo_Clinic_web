@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './General';
+import { Link, Route, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 const Services =() => {
     useEffect(() => {
@@ -27,59 +27,61 @@ const Services =() => {
                     <p className='text-gray-600'>
                         Routine health checkups and treatment.
                     </p>
-                    <a href="/general" className='text-blue-500 hover:text-blue-700'>
+                    <Link to="/general" className='text-blue-500 hover:text-blue-700'>
                         Learn More
-                    </a>
+                    </Link >
                 </div>
                 <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-left">
-                    <h2 className='text-xl font-semibold text-black mb-4'>General Consultation</h2>
+                    <h2 className='text-xl font-semibold text-black mb-4'>Specialist Consultation</h2>
+                    <p className='text-gray-600'>
+                        Expert medical advice and treatment from specialists.
+                    </p>
+                    <Link to="/specialist" className='text-blue-500 hover:text-blue-700'>
+                        Learn More
+                    </Link>
+                </div>
+                <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-right">
+                    <h2 className='text-xl font-semibold text-black mb-4'>Vaccination</h2>
                     <p className='text-gray-600'>
                         Routine health checkups and treatment.
                     </p>
-                    <a href="/general" className='text-blue-500 hover:text-blue-700'>
+                    <Link to="/vaccination" className='text-blue-500 hover:text-blue-700'>
                         Learn More
-                    </a>    
+                    </Link>
+                </div>
+                <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-left">
+                    <h2 className='text-xl font-semibold text-black mb-4'>Laboratory Test
+                    </h2>
+                    <p className='text-gray-600'>
+                        Routine health checkups and treatment.
+                    </p>
+                    <Link to="/laboratory" className='text-blue-500 hover:text-blue-700'>
+                        Learn More
+                    </Link>
                 </div>
                 <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-right">
                     <h2 className='text-xl font-semibold text-black mb-4'>General Consultation</h2>
                     <p className='text-gray-600'>
                         Routine health checkups and treatment.
                     </p>
-                     <a href="/general" className='text-blue-500 hover:text-blue-700'>
+                    <Link to="/general" className='text-blue-500 hover:text-blue-700'>
                         Learn More
-                    </a>  
-                </div>
-                <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-left">
-                    <h2 className='text-xl font-semibold text-black mb-4'>General Consultation</h2>
-                    <p className='text-gray-600'>
-                        Routine health checkups and treatment.
-                    </p>
-                     <a href="/general" className='text-blue-500 hover:text-blue-700'>
-                        Learn More
-                    </a>  
-                </div>
-                <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-right">
-                    <h2 className='text-xl font-semibold text-black mb-4'>General Consultation</h2>
-                    <p className='text-gray-600'>
-                        Routine health checkups and treatment.
-                    </p>
-                     <a href="/general" className='text-blue-500 hover:text-blue-700'>
-                        Learn More
-                    </a>  
+                    </Link>
                 </div>
                 <div className='bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-xl hover:p-4 transition-shadow duration-300' data-aos="fade-up-left" >
                     <h2 className='text-xl font-semibold text-black mb-4'>General Consultation</h2>
                     <p className='text-gray-600'>
                         Routine health checkups and treatment.
                     </p>
-                     <a href="/general" className='text-blue-500 hover:text-blue-700'>
+                     <Link to="/general" className='text-blue-500 hover:text-blue-700'>
                         Learn More
-                    </a>  
+                    </Link>
                 </div>
                
             </div>
             <br />
             <br />
+            
           
         </div>
     )

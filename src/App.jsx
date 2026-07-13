@@ -5,10 +5,13 @@ import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import Services from './Services'
-import instagram from './assets/instagram.png'
+import instagram from './assets/instagram.png'  
 import facebook from './assets/facebook.png'
 import youtube from './assets/youtube.png'
-
+import GeneralConsult from './GeneralCosult'
+import SpecialistConsult from './SpeacialistConsult'
+import Vaccination from './Vaccination'
+import Laboratory from './Laboratory'
 
 const App =() => {
     
@@ -77,6 +80,10 @@ const App =() => {
         <Route path='/about'  element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/general' element={<GeneralConsult/>}/>
+        <Route path='/specialist' element={<SpecialistConsult/>}/>
+        <Route path='/vaccination' element={<Vaccination/>}/>
+        <Route path='/laboratory' element={<Laboratory/>}/>
       </Routes>
     </div>
     )
