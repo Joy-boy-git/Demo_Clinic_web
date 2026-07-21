@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import { Link } from "react-router-dom";
-
 import "aos/dist/aos.css";
 
 import About from "./About";
@@ -11,6 +10,8 @@ import Contact from "./Contact";
 import video from "./assets/video.mp4";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,7 +20,34 @@ const Home = () => {
     });
 
     AOS.refresh();
+
+    // Loader timer
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  // Loader Screen
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
+        {/* Logo / Website Name */}
+        <h1 className="text-white text-5xl md:text-7xl font-extrabold animate-pulse">
+          STAR Clinic
+        </h1>
+
+        {/* Spinner */}
+        <div className="mt-10 w-16 h-16 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+
+        {/* Loading Text */}
+        <p className="mt-6 text-gray-300 text-lg tracking-widest">
+          Loading...
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -31,16 +59,16 @@ const Home = () => {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Dark Overlay */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Content */}
+        {/* Hero Content */}
         <div className="relative z-10 min-h-screen flex items-center">
           <div className="max-w-2xl px-6 sm:px-10 md:px-16">
             <h1
@@ -71,6 +99,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Other Sections */}
       <About />
       <Services />
       <Contact />
