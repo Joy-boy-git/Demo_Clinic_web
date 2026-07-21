@@ -4,6 +4,7 @@ import './Services';
 import './Contact';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
     return (
         <footer className="bg-gray-800 text-white py-6">

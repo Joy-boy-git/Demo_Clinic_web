@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import { FaEnvelope } from "react-icons/fa";
 
+import ScrollToTop from "./ScrollToTop";
+
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
@@ -47,7 +49,7 @@ const App = () => {
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-          {/* Logo */}
+          {/* Mobile Logo */}
           <h1 className="text-3xl font-bold md:hidden">
             STAR <span className="text-blue-600">Clinic</span>
           </h1>
@@ -82,15 +84,15 @@ const App = () => {
           {/* Social Icons */}
           <div className="hidden md:flex gap-4">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <img src={instagram} alt="" className="w-7" />
+              <img src={instagram} alt="Instagram" className="w-7" />
             </a>
 
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <img src={facebook} alt="" className="w-7" />
+              <img src={facebook} alt="Facebook" className="w-7" />
             </a>
 
             <a href="https://youtube.com" target="_blank" rel="noreferrer">
-              <img src={youtube} alt="" className="w-7" />
+              <img src={youtube} alt="YouTube" className="w-7" />
             </a>
           </div>
 
@@ -165,25 +167,22 @@ const App = () => {
 
       {/* Main Content */}
       <main className="min-h-screen">
+
+        {/* Scroll to Top on Route Change */}
+        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/about" element={<About />} />
-
           <Route path="/services" element={<Services />} />
-
           <Route path="/contact" element={<Contact />} />
-
           <Route path="/general" element={<GeneralConsult />} />
-
           <Route path="/specialist" element={<SpecialistConsult />} />
-
           <Route path="/vaccination" element={<Vaccination />} />
-
           <Route path="/laboratory" element={<Laboratory />} />
-
           <Route path="*" element={<Home />} />
         </Routes>
+
       </main>
     </>
   );
